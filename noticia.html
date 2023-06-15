@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova notícia
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .video-container {
+            overflow: hidden;
+            position: relative;
+            width:100%;
+        }
+        
+        .video-container::after {
+            padding-top: 56.25%;
+            display: block;
+            content: '';
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+
+        .paragrafo1 h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: 32px;
+            color: rgb(36, 36, 36);
+            margin-top: 20px;
+
+            margin-bottom: 0px;
+        }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(rgb(0, 3, 46),
+                    rgb(20, 79, 114) 100%);
+
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        div p {
+            color: white;
+            font-family: "Poppins";
+        }
+
+        div a {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            max-width: 80%;
+        }
+
+        .titulo {
+            font-size: 38px;
+            font-weight: 700;
+            align-items: left;
+        }
+
+        .data p {
+            color: rgb(204, 216, 216);
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .principal {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: 0px;
+            height: auto;
+        }
+
+        .paragrafo1 {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+
+        .imagem {
+            display: flex;
+            justify-content: center;
+            background-size: cover;
+            resize: both;
+            overflow: auto;
+
+            height: 245px;
+            width: 300px;
+            margin-top: 25px;
+            background-color: rgb(73, 73, 73);
+            border-radius: 20px;
+        }
+
+        .apoiadores {
+            margin-top: 20px;
+            height: 90%;
+            width: 90%;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .banner img {
+            width: 700px;
+            height: auto;
+
+        }
+
+        .imagem_retrato {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .imagem_retrato img {
+            width: 700px;
+            height: auto;
+        }
+
+        .paragrafo1 article {
+            height: auto;
+            width: auto;
+            margin-top: 14px;
+            font-family: "Poppins", sans-serif;
+            font-size: 26px;
+        }
+
+        .desenvolvimento {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            width: 100%;
+        }
+
+        .desenvolvimento article {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .desenvolvimento-conteudo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            display: flex;
+            max-width: 700px;
+            width: auto;
+        }
+
+        .desenvolvimento-conteudo h1 {
+            font-size: 32px;
+            color: rgb(36, 36, 36);
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
+
+        .desenvolvimento article {
+            margin-top: 20px;
+            width: auto;
+        }
+
+        .audio_descricao {
+            margin-top: 20px;
+        }
+
+        hr {
+            max-width: 650px;
+        }
+
+        /*Media Queries*/
+        @media screen and (max-width: 734px) {
+            .titulo {
+                font-size: 19px;
+            }
+
+            .principal {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .paragrafo1 {
+                width: 100%;
+            }
+
+            .paragrafo1 h1 {
+                font-size: 25px;
+
+
+            }
+
+            .paragrafo1 article {
+                font-size: 19px;
+
+            }
+
+
+            .desenvolvimento-conteudo article {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .banner img {
+                width: auto;
+                height: auto;
+                max-width: 680px;
+                max-height: 480px;
+
+            }
+
+            .imagem_retrato img {
+                width: auto;
+                height: auto;
+                max-width: 610px;
+
+            }
+        }
+
+
+        @media screen and (max-width: 640px) {
+            .banner img {
+                width: 90%;
+                height: auto;
+            }
+
+            .imagem_retrato img {
+                width: auto;
+                height: auto;
+                max-width: 450px;
+
+            }
+        }
+
+        @media screen and (max-width: 540px) {
+            .banner img {
+                width: 90%;
+                height: auto;
+
+            }
+
+            .imagem_retrato img {
+                width: auto;
+                height: auto;
+                max-width: 350px;
+
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .titulo {
+                font-size: 95%;
+            }
+
+            .paragrafo1 {
+                width: 100%;
+            }
+
+            .paragrafo1 h1 {
+                font-size: 18px;
+            }
+
+            .paragrafo1 article {
+                font-size: 16px;
+            }
+
+            .imagem {
+                height: auto;
+                width: 200px;
+            }
+
+            .desenvolvimento-conteudo h1 {
+                font-size: 18px;
+            }
+
+            .desenvolvimento-conteudo article {
+                font-size: 16px;
+            }
+
+            .banner img {
+                width: 90%;
+                height: auto;
+
+            }
+
+            .imagem_retrato img {
+                width: auto;
+                height: auto;
+                max-width: 320px;
+
+            }
+
+        }
+
+        @media screen and (max-width: 378px) {
+            .titulo {
+                font-size: 88%;
+            }
+
+            .paragrafo1 h1 {
+                font-size: 18px;
+            }
+
+            .paragrafo1 {
+                width: 100%;
+            }
+
+            .desenvolvimento {
+                width: 100%;
+            }
+
+            .paragrafo1 article {
+                font-size: 16px;
+            }
+
+            .imagem {
+                height: 245px;
+                width: 300px;
+            }
+
+            .desenvolvimento-conteudo h1 {
+                font-size: 18px;
+            }
+
+            .desenvolvimento-conteudo article {
+                width: 90%;
+                font-size: 16px;
+
+            }
+
+            .banner img {
+                width: 90%;
+                height: auto;
+
+            }
+
+            .imagem_retrato img {
+                width: auto;
+                height: auto;
+                max-width: 280px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <p class="titulo">Associação de Trabalhadores<br>em Domicílio da Economia Solidária</p>
+    </div>
+
+    <div class="desenvolvimento">
+
+        <div class="desenvolvimento-conteudo">
+            <h1>O Trabalho em Domicílio no Mundo</h1>
+            <div class="banner">
+                <img src="https://raw.githubusercontent.com/aguiar0x01/atemdo-resources/master/img/noticia-3/Imagem1.jpg" alt="">
+            </div>
+            <article>
+                Nos meses de abril e maio deste ano, a Atemdo, mais uma vez esteve nos locais de diálogo e organização do Trabalho em Domicílio. Diálogos esses que são importantes para fortalecer o debate na luta por direitos.
+                <br/>
+                <br/>                
+            </article>
+            
+            <div class="banner">
+                <img src="https://raw.githubusercontent.com/aguiar0x01/atemdo-resources/master/img/noticia-3/Imagem2.jpg" alt="">
+            </div>
+            <article>
+                De 25 a 28 de abril, a Presidente Edileuza Guimarães e a Vice-Presidente, Edna Simão, participaram do 2º Congresso da Homenet Internacional. Evento potente e de uma organização maravilhosa, que foi sediado em Katmandu – Nepal, onde a riqueza da cultura popular tem muita força. Por outro lado, a assistência do Estado aos seus trabalhadores, sobretudo, às mulheres, são fracas e quase inexistentes. O local foi muito bem escolhido – as visitas de campo nos mostraram que a luta por políticas públicas se faz mais que necessária naquela região.
+                <br/>
+                <br/>
+                Trabalhadoras e trabalhadores sem apoio, sem EPIs, sem cuidados, sem saúde e sem direitos.
+                <br/>
+                <br/>
+                Nossa participação no Congresso nos mostrou o quanto ainda temos que lutar. E continuaremos lutando, pois, a realidade de um é a de todos, e na luta por direitos somos todos um só.
+                <br/>
+            </article>
+            
+        </div>
+    </div>
+
+    <div class="desenvolvimento">
+        <div class="desenvolvimento-conteudo">
+            <div class="banner">
+                <img src="https://raw.githubusercontent.com/aguiar0x01/atemdo-resources/master/img/noticia-3/Imagem4.jpg" alt="">
+            </div>
+            <article>
+                Nossa delegação composta pelos países: Argentina, Brasil, Chile, El Salvador e Uruguai tinha um número de nove pessoas. Duas representantes foram eleitas para compor o Comitê Executivo junto à diretoria eleita – Presidente, Vice-Presidente e Tesoureira, assim como uma coordenadora internacional. As representantes eleitas foram Tatiana Rojas (Chile) e Edileuza Guimarães (Brasil), ambas representando Cotrado Alac – Coordenadora de Organizações de Trabalhadores em Domicilio da América Latina e Caribe. As duas representantes irão cumprir o mandato de 4 anos. Cotrado Alac sugeriu à comissão de eleição que um Comitê de Gênero fosse criado. A sugestão foi acatada pelo comitê executivo em sua primeira reunião pós-eleição, e temos oficialmente dentro da Homenet Internacional um comitê de gênero que terá o olhar voltado às causas feministas de todos os países membros.
+            </article>
+
+        </div>
+    </div>
+
+    <div class="desenvolvimento">
+        <div class="desenvolvimento-conteudo">
+            <div class="banner">
+                <img src="https://raw.githubusercontent.com/aguiar0x01/atemdo-resources/master/img/noticia-3/Imagem3.jpg" alt="">
+            </div>
+            <article>
+                De 16 a 18 de maio o diálogo foi nacional.
+                <br/>
+                <br/>
+                Estivemos junto aos Trabalhadores que compõem a intersetorial de trabalhadores informais: Trabalhadoras Domésticas, Trabalhadores Ambulantes, Trabalhadores em Domicílio da Economia Solidária, Trabalhadores Catadores de Recicláveis e Trabalhadores de Aplicativos, na realização do 3º encontro de trabalho realizado em Brasília. O lugar foi escolhido devido à demandas e tarefas tiradas do evento anterior, o 2º encontro, realizado em São Paulo, em novembro de 2022.
+                <br/>
+                <br/>
+                No dia 16 realizamos na Câmara de Deputados uma audiência pública para iniciar os trabalhos de coleta de assinaturas em apoio à nossa <strong>Frente Parlamentar</strong> Nº 230508001 de 2023 (Do Sr. Vicentinho), que tem como base os princípios da recomendação 204 da OIT (Organização Internacional do Trabalho). Trata-se da transição da informalidade para a formalidade, porém com direitos. Oficialmente lançada, agora necessitamos de 198 assinaturas. Nos ajude nessa coleta, divulgando nossa frente para os deputados federais de seu conhecimento.
+                <br/>
+                <br/>
+                No dia 17 estivemos no Ministério do Trabalho, onde formos cordialmente recebidos pelo Ministro Luiz Marinho e o representante da Secretaria Nacional de Economia Solidária, o Vital. Nesse encontro fizemos uma rodada de apresentação de cada setor e das suas demandas, entregamos uma carta ao Ministro e também o incumbimos a entregar uma carta ao presidente da república. Nas cartas falamos de nossas realidades e lutas, reivindicando o direito ao diálogo e à organização a partir da parceria com o poder público, promovendo entendimento de nossas lutas para fortalecer nossas políticas públicas.
+                <br/>
+                <br/>
+                À tarde, nesse mesmo dia, visitamos a COOPCENT e vimos na prática o dia a dia do trabalhador catador de material reciclável. Essa visita nos mostrou que ainda temos muito o que aprender e evoluir quando o assunto é Reciclar e cuidar daqueles que cuidam para que o meio ambiente não sofra ainda mais com os maus-tratos causados por lixo não tratado.
+                <br/>
+                <br/>
+                E para fechar esse dia com chave de ouro, recebemos a visita do Ministro dos Direitos Humanos e Cidadania, Silvio Almeida, que foi ao hotel onde nossa atividade estava sendo realizada para nos apoiar e se colocar à disposição do nosso grupo.
+                <br/>
+                <br/>
+                Por fim, no dia 18, demos continuidade às atividades e encaminhamos algumas ações para as reuniões virtuais.
+                <br/>
+                <br/>
+                Ainda nos sobrou tempo para ir ao Palácio do Planalto visitar nosso amigo Valmir Prascidelli – Secretário de Relações Institucionais, e pedir seu apoio para divulgar a nossa frente parlamentar.
+            </article>
+        </div>
+    </div>
+
+    <div class="desenvolvimento">
+        <div class="desenvolvimento-conteudo">
+            <div class="banner">
+                <img src="https://raw.githubusercontent.com/aguiar0x01/atemdo-resources/master/img/noticia-3/Imagem6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <center>
+        <hr>
+    </center>
+    <div class="desenvolvimento">
+        <div class="desenvolvimento-conteudo">
+            <article>
+                <br><strong>Parceiras:</strong>
+            </article>
+            <img class="apoiadores"
+                src="https://github.com/aguiar0x01/atemdo-resources/blob/master/parceiras/apoiadores.png?raw=true"
+                alt="">
+            <article>
+                <br><strong>Apoio:</strong>
+            </article>
+            <img class="apoiadores"
+                src="https://github.com/aguiar0x01/atemdo-resources/blob/master/parceiras/parceiras.png?raw=true"
+                alt="">
+        </div>
+    </div>
+</body>
+
+</html>
